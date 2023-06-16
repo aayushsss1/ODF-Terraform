@@ -13,7 +13,7 @@ then
     echo "ok"
 else
     terraform1.3 import -var-file=${WORKING_DIR}/ocscluster/schematics.tfvars kubernetes_manifest.ocscluster_ocscluster_auto "apiVersion=ocs.ibm.io/v1,kind=OcsCluster,namespace=openshift-storage,name=ocscluster-auto"
-    terraform1.3 apply --auto-approve -var-file ${WORKING_DIR}/ibm_odf_addon/schematics.tfvars
+    terraform1.3 apply --auto-approve -var-file ${WORKING_DIR}/ocscluster/schematics.tfvars
 fi
 
 terraform1.3 destroy --auto-approve -var-file=${WORKING_DIR}/ocscluster/schematics.tfvars
