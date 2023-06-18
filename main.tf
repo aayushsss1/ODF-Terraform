@@ -47,6 +47,7 @@ resource "null_resource" "updateCRD" {
         numOfOsd = var.numOfOsd
         ocsUpgrade = var.ocsUpgrade
         workerNodes = var.workerNodes
+        osdDevicePaths = var.osdDevicePaths
     }
     
 
